@@ -83,7 +83,6 @@ let user = [
 ]
 
 
-
 console.log(user[0].password)
 console.log(user[1].password)
 console.log(user[2].password)
