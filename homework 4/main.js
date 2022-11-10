@@ -1,19 +1,7 @@
 //- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 
-let form = [
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false},
-];
 
-for (let us of form) {
+for (i = 0; i < 10; i++) {
     document.write(
         ` 
     <div>OBJECT</div>
@@ -24,92 +12,35 @@ for (let us of form) {
 
 //- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 
-let text = [
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false}
-]
 
-for (let i = 0; i < text.length; i++) {
+for (i = 0; i < 10; i++) {
 
     document.write(
         ` 
-  <div>Object ${i + 1}</div>
- 
+    <div>${i + 1} Object</div>
         `
     )
 }
 
 //- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
 
-let files = [
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false},
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false},
-]
+
 let id = 0;
-while (id < files.length) {
-    let user = files[id]
-    if (user.status) {
-        document.write(`<h1>Text</h1>`)
-    }
+while (id < 20) {
+
+    document.write(`<h1>Text</h1>`)
+
     id++
 }
 
 //- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
 
-let file = [
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false},
-    {name: 'vasya', age: 31, status: false},
-    {name: 'petya', age: 30, status: true},
-    {name: 'kolya', age: 29, status: true},
-    {name: 'olya', age: 28, status: false},
-    {name: 'max', age: 30, status: true},
-    {name: 'anya', age: 31, status: false},
-    {name: 'oleg', age: 28, status: false},
-    {name: 'andrey', age: 29, status: true},
-    {name: 'masha', age: 30, status: true},
-    {name: 'olya', age: 31, status: false},
-]
+
 let ind = 0;
-while (ind < file.length) {
-    let user = file[ind]
-    if (user.name) {
-        document.write(`<h1>List${ind + 1}</h1>`)
-    }
+while (ind < 20) {
+
+    document.write(`<h1>${ind + 1} List</h1>`)
+
     ind++
 }
 
@@ -118,13 +49,16 @@ while (ind < file.length) {
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 
-for (let i = 0; i < listOfItems.length; i++)
-{
+document.write(`<ul>`)
+for (let i = 0; i < listOfItems.length; i++) {
     let ItemOfArray = listOfItems[i]
-    document.write(`<ul>
+    document.write(`
     <li>${ItemOfArray}</li>
-    </ul>`)
+    `)
 }
+document.write(`</ul>`)
+
+
 //Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону  Зробити адекватну стилізацію
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
@@ -152,8 +86,7 @@ let products = [
     },
 ];
 
-for (let i = 0; i < products.length; i++)
-{
+for (let i = 0; i < products.length; i++) {
     let product = products[i]
     document.write(`
     <div class="product-card">
