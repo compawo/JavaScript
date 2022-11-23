@@ -61,30 +61,16 @@
 // sortNums(nums,'descending') // [21,11,3]
 
 // let nums = [11, 21, 3];
-// console.log(nums.sort(function (a, b) {
-//     if (a < b) {
-//         return 1;
+//  const sortNums = (direction, arr) => {
+//     if (direction === 'ascending') {
+//         arr.sort ((a, b) => a - b);
+//     } else if (direction === 'descending') {
+//         arr.sort ( (a, b) => b - a);
 //     }
-//     if (a > b) {
-//         return -1;
-//     }
-//     if (a === b) {
-//         return 0;
-//     }
-// }));
-//
-// console.log(nums.sort(function (a, b) {
-//     if (a < b) {
-//         return -1;
-//     }
-//     if (a > b) {
-//         return 1;
-//     }
-//     if (a === b) {
-//         return 0;
-//     }
-// }));
-
+//     return arr;
+// };
+// console.log(sortNums('ascending', nums));
+// console.log(sortNums('descending', nums));
 
 // - є масив
 // let coursesAndDurationArray = [
@@ -106,19 +92,9 @@
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// console.log(coursesAndDurationArray.sort(function (a, b) {
-//     if (a.monthDuration < b.monthDuration) {
-//         return 1;
-//     }
-//     if (a.monthDuration > b.monthDuration) {
-//         return -1;
-//     }
-//     if (a.monthDuration === b.monthDuration) {
-//         return 0;
-//     }
-// }));
-//
-//
+// console.log(coursesAndDurationArray.sort( (a, b) =>
+//     b.monthDuration - a.monthDuration) );
+
 // let filter = coursesAndDurationArray.filter((index) => index.monthDuration > 5);
 // console.log(filter);
 
@@ -136,56 +112,56 @@
 //     color:'', // 'red','black'
 // }
 
-let deck = [
-    {cardSuit: 'Spade', value: 6, color: 'Black'},
-    {cardSuit: 'Clubs', value: 6, color: 'Black'},
-    {cardSuit: 'Hearts', value: 6, color: 'Red'},
-    {cardSuit: 'Diamonds', value: 6, color: 'Red'},
-    {cardSuit: 'Spade', value: 7, color: 'Black'},
-    {cardSuit: 'Clubs', value: 7, color: 'Black'},
-    {cardSuit: 'Hearts', value: 7, color: 'Red'},
-    {cardSuit: 'Diamonds', value: 7, color: 'Red'},
-    {cardSuit: 'Spade', value: 8, color: 'Black'},
-    {cardSuit: 'Clubs', value: 8, color: 'Black'},
-    {cardSuit: 'Hearts', value: 8, color: 'Red'},
-    {cardSuit: 'Diamonds', value: 8, color: 'Red'},
-    {cardSuit: 'Spade', value: 9, color: 'Black'},
-    {cardSuit: 'Clubs', value: 9, color: 'Black'},
-    {cardSuit: 'Hearts', value: 9, color: 'Red'},
-    {cardSuit: 'Diamonds', value: 9, color: 'Red'},
-    {cardSuit: 'Spade', value: 10, color: 'Black'},
-    {cardSuit: 'Clubs', value: 10, color: 'Black'},
-    {cardSuit: 'Hearts', value: 10, color: 'Red'},
-    {cardSuit: 'Diamonds', value: 10, color: 'Red'},
-    {cardSuit: 'Spade', value: 'Jack', color: 'Black'},
-    {cardSuit: 'Clubs', value: 'Jack', color: 'Black'},
-    {cardSuit: 'Hearts', value: 'Jack', color: 'Red'},
-    {cardSuit: 'Diamonds', value: 'Jack', color: 'Red'},
-    {cardSuit: 'Spade', value: 'Queen', color: 'Black'},
-    {cardSuit: 'Clubs', value: 'Queen', color: 'Black'},
-    {cardSuit: 'Hearts', value: 'Queen', color: 'Red'},
-    {cardSuit: 'Diamonds', value: 'Queen', color: 'Red'},
-    {cardSuit: 'Spade', value: 'King', color: 'Black'},
-    {cardSuit: 'Clubs', value: 'King', color: 'Black'},
-    {cardSuit: 'Hearts', value: 'King', color: 'Red'},
-    {cardSuit: 'Diamonds', value: 'King', color: 'Red'},
-    {cardSuit: 'Spade', value: 'Ace', color: 'Black'},
-    {cardSuit: 'Clubs', value: 'Ace', color: 'Black'},
-    {cardSuit: 'Hearts', value: 'Ace', color: 'Red'},
-    {cardSuit: 'Diamonds', value: 'Ace', color: 'Red'},
-    {value: 'Joker', color: 'Red'},
-    {value: 'Joker', color: 'Black'}
-];
-let filter = deck.find((value) => value.cardSuit === 'Spade' && value.value === 'Ace')
-console.log(filter)
-let filter2 = deck.filter((index) => index.value === 6)
-console.log(filter2)
-let filter3 = deck.filter((card) => card.color === 'Red')
-console.log(filter3)
-let filter4 = deck.filter((suit) => suit.cardSuit === 'Diamonds')
-console.log(filter4)
-let filter5 = deck.filter(suit => suit.cardSuit === 'Clubs' && (suit.value >= 9 || suit.value.length > 2));
-console.log(filter5)
+// let deck = [
+//     {cardSuit: 'Spade', value: 6, color: 'Black'},
+//     {cardSuit: 'Clubs', value: 6, color: 'Black'},
+//     {cardSuit: 'Hearts', value: 6, color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 6, color: 'Red'},
+//     {cardSuit: 'Spade', value: 7, color: 'Black'},
+//     {cardSuit: 'Clubs', value: 7, color: 'Black'},
+//     {cardSuit: 'Hearts', value: 7, color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 7, color: 'Red'},
+//     {cardSuit: 'Spade', value: 8, color: 'Black'},
+//     {cardSuit: 'Clubs', value: 8, color: 'Black'},
+//     {cardSuit: 'Hearts', value: 8, color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 8, color: 'Red'},
+//     {cardSuit: 'Spade', value: 9, color: 'Black'},
+//     {cardSuit: 'Clubs', value: 9, color: 'Black'},
+//     {cardSuit: 'Hearts', value: 9, color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 9, color: 'Red'},
+//     {cardSuit: 'Spade', value: 10, color: 'Black'},
+//     {cardSuit: 'Clubs', value: 10, color: 'Black'},
+//     {cardSuit: 'Hearts', value: 10, color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 10, color: 'Red'},
+//     {cardSuit: 'Spade', value: 'Jack', color: 'Black'},
+//     {cardSuit: 'Clubs', value: 'Jack', color: 'Black'},
+//     {cardSuit: 'Hearts', value: 'Jack', color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 'Jack', color: 'Red'},
+//     {cardSuit: 'Spade', value: 'Queen', color: 'Black'},
+//     {cardSuit: 'Clubs', value: 'Queen', color: 'Black'},
+//     {cardSuit: 'Hearts', value: 'Queen', color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 'Queen', color: 'Red'},
+//     {cardSuit: 'Spade', value: 'King', color: 'Black'},
+//     {cardSuit: 'Clubs', value: 'King', color: 'Black'},
+//     {cardSuit: 'Hearts', value: 'King', color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 'King', color: 'Red'},
+//     {cardSuit: 'Spade', value: 'Ace', color: 'Black'},
+//     {cardSuit: 'Clubs', value: 'Ace', color: 'Black'},
+//     {cardSuit: 'Hearts', value: 'Ace', color: 'Red'},
+//     {cardSuit: 'Diamonds', value: 'Ace', color: 'Red'},
+//     {value: 'Joker', color: 'Red'},
+//     {value: 'Joker', color: 'Black'}
+// ];
+// let filter = deck.find((value) => value.cardSuit === 'Spade' && value.value === 'Ace')
+// console.log(filter)
+// let filter2 = deck.filter((index) => index.value === 6)
+// console.log(filter2)
+// let filter3 = deck.filter((card) => card.color === 'Red')
+// console.log(filter3)
+// let filter4 = deck.filter((suit) => suit.cardSuit === 'Diamonds')
+// console.log(filter4)
+// let filter5 = deck.filter(suit => suit.cardSuit === 'Clubs' && (suit.value >= 9 || suit.value.length > 2));
+// console.log(filter5)
 
 
 // Додатково по reduce
@@ -196,3 +172,22 @@ console.log(filter5)
 //     hearts:[],
 //     clubs:[]
 // }
+
+// let reduce = deck.reduce((accum, value) => {
+//     if (value.cardSuit === 'Spade') {
+//         accum.spades.push(value);
+//     } else if (value.cardSuit === 'Clubs') {
+//         accum.clubs.push(value);
+//     } else if (value.cardSuit === 'Diamonds') {
+//         accum.diamonds.push(value);
+//     } else if (value.cardSuit === 'Hearts') {
+//         accum.hearts.push(value);
+//     }
+//     return accum;
+// }, {
+//     spades: [],
+//     diamonds: [],
+//     hearts: [],
+//     clubs: []
+// });
+// console.log(reduce);
