@@ -86,12 +86,21 @@ function Item(model, producer, year, maxspeed, vEngine) {
     this.maxspeed = maxspeed;
     this.vEngine = vEngine;
 
+    this.info = function () {
+        for (const carKey in this) {
+            if (typeof this[carKey] !== 'function') {
+                console.log(`${carKey} -- ${this[carKey]}`)
+            }
+
+        }
+    };
+
 }
 
 let car = new Item('Hyundai Genesis G70', 'Hyundai', 2017, 200, '2.2 CRDi');
 console.log(car);
 
-
+car.info()
 //     -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
 
 // Item.prototype.drive = function () {
@@ -101,14 +110,7 @@ console.log(car);
 
 //     -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 
-Item.prototype.info = function () {
-    for (const argument of this) {
-        if (typeof this [carKey] !== 'function') {
-            console.log(`${carKey} -- ${this[carKey]}`)
-        }
 
-    }
-};
 
 
 
@@ -219,10 +221,10 @@ console.log(cindrellas);
 
 class Prince {
 
-    constructor(name, age, size) {
+    constructor(name, age, findSize) {
         this.name = name;
         this.age = age;
-        this.size = size;
+        this.findSize = findSize;
     }
 }
 
@@ -231,7 +233,7 @@ console.log(prince);
 // За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 const findSize = (arr, marriage) => {
 for (const first of arr) {
-    if (first.size === marriage.size) {
+    if (first.size === marriage.findSize) {
         console.log(`I will marry on ${first.name}`);
 
     }
@@ -242,3 +244,6 @@ findSize(cindrellas, prince)
 
 
 // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+let find = cindrellas.find(value => value.size === prince.findSize)
+console.log(find);
