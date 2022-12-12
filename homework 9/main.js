@@ -41,22 +41,24 @@
 // Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
 
 // for (const simpson of simpsons) {
+//     const {name, surname, age, info, photo} = simpson;
+//
 //     let createDiv = document.createElement('div');
-//     document.body.append(createDiv)
 //     createDiv.classList.add('member');
 //
-//     let createH1 = document.createElement('h2')
-//     document.body.append(createH1)
+//     let createH1 = document.createElement('h1');
 //     createH1.classList.add('h1Style');
 //     createH1.innerText = `${simpson.name} ${simpson.surname} ${simpson.age}`;
 //
-//     let createP = document.createElement('p')
-//     document.body.append(createP)
+//     let createP = document.createElement('p');
 //     createP.innerText = `${simpson.info}`;
 //
-//     let createImg = document.createElement('img')
-//     document.body.append(createImg)
-//     createImg.setAttribute( 'src','${simpson.photo}');
+//     let img = document.createElement('img');
+//     document.body.append(img);
+//     img.src = photo;
+//
+//     createDiv.append(createH1, createP, img);
+//     document.body.append(createDiv);
 //
 // }
 
@@ -138,27 +140,29 @@
 // Приклад структири знаходиться у файлі example.png
 
 // for (const arr of coursesArray) {
+//     const {title, monthDuration, hourDuration, modules} = arr;
+//
 //     let createDiv = document.createElement('div');
 //     document.body.append(createDiv)
 //     createDiv.classList.add('developer');
 //
-//     let createH1 = document.createElement('h1')
-//     document.body.append(createH1)
+//     let createH1 = document.createElement('h1');
+//     createDiv.append(createH1);
 //     createH1.classList.add('h1Style');
 //     createH1.innerText = `${arr.title} `;
 //
-//     let createH2 = document.createElement('h2')
-//     document.body.append(createH2)
+//     let createH2 = document.createElement('h2');
+//     createDiv.append(createH2);
 //     createH2.innerText = `monthDuration -- ${arr.monthDuration}; hourDuration -- ${arr.hourDuration}`;
 //
 //
-//     let li = document.createElement('li')
-//     document.body.append(li);
-//     for (let i = 0; i < arr.length; i++) {
-//         const liElement = li[i];
-//         console.log(`${liElement.modules}`);
-//         //
-//         // liElement.innerText = `${arr.modules.length} `;
+//     let ul = document.createElement('ul');
+//     createDiv.append(ul);
+//
+//     for (const arrElement of arr.modules) {
+//         let li = document.createElement('li');
+//         li.innerText = `${arrElement}`;
+//         ul.append(li);
 //
 //     }
 // }
@@ -175,10 +179,15 @@
 // - додати цей блок в body.
 // - клонувати його повністю, та додати клон в body.
 
-
-
-
-
+// let div = document.createElement('div');
+// div.innerText = 'hi!';
+// div.classList.add('wrap', 'collapse', 'alpha', 'beta');
+// div.style.background = 'lightblue';
+// div.style.color = 'darkviolet';
+// div.style.fontSize = '25px';
+//
+// document.body.append(div);
+// document.body.append(div.cloneNode(true));
 
 
 // - Є масив:
@@ -186,6 +195,16 @@
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
 //
+// let arr = ['Main', 'Products', 'About us', 'Contacts'];
+// let ul = document.getElementsByClassName('menu')[0];
+//
+// for (const ulElement of arr) {
+//     let li = document.createElement('li');
+//     li.innerText = `${ulElement}`;
+//     ul.append(li);
+//
+// }
+
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -201,9 +220,9 @@
 // Завдання робити через цикли.
 
 // for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
-//     let div = document.createElement('div')
-//     document.body.append(div)
-//     div.innerText = `${coursesAndDurationArrayElement.title} -- ${coursesAndDurationArrayElement.monthDuration}`
+//     let div = document.createElement('div');
+//     document.body.append(div);
+//     div.innerText = `${coursesAndDurationArrayElement.title} -- ${coursesAndDurationArrayElement.monthDuration}`;
 // }
 
 // - Є масив
@@ -221,30 +240,86 @@
 // Завдання робити через цикли.
 
 // for (const arr of coursesAndDurationArray) {
-//     let div = document.createElement('div')
+//     let div = document.createElement('div');
 //     div.classList.add('item');
 //
-//     let h1 = document.createElement('h1')
+//     let h1 = document.createElement('h1');
 //     h1.classList.add('heading');
 //     h1.innerText =`${arr.title}`;
 //
-//     let p = document.createElement('p')
+//     let p = document.createElement('p');
 //     p.classList.add('description');
 //     p.innerText = `${arr.monthDuration}`;
 //
-//     document.body.append(div, h1, p)
+//     document.body.append(div, h1, p);
 // }
 
 // -----------
 //
 // - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 
+// let div = document.createElement('div');
+// div.innerText = 'hi!';
+// div.setAttribute('id','text');
+//
+// let button = document.createElement('button');
+// button.innerText = 'click';
+//
+// document.body.append(div, button)
+// button.onclick = () => {
+//     div.style.display = 'none';
+// }
 
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 
-/*завдання в index.html*/
+// let input = document.createElement('input');
+// let button = document.createElement('button');
+// document.body.append(input, button);
+// button.innerText = 'age';
+//
+// button.onclick = () =>{
+//     if (input.value < 18) {
+//         alert('too young')
+//     } else if (input.value >= 18){
+//         alert('Good')
+//     }
+// }
 
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 // При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-// Footer
+
+let inputOne = document.createElement('input');
+let inputTwo = document.createElement('input');
+let inputThree = document.createElement('input');
+
+let button = document.createElement('button');
+button.innerText = 'Click';
+
+document.body.append(inputOne,inputTwo,inputThree,button);
+
+button.onclick = () => {
+    let tr = inputOne.value;
+    let td = inputTwo.value;
+    let text = inputThree.value;
+
+    const generateTable = (raws,columns,word) => {
+        let table = document.createElement('table');
+        table.style.border = `2px solid black`;
+        document.body.append(table);
+
+        for (let i = 0; i < raws; i++) {
+            let raw = document.createElement('tr');
+            table.append(raw);
+
+            for (let j = 0; j < columns; j++) {
+                let column = document.createElement('td');
+                column.innerText = `${word}`;
+                column.style.border = `2px solid red`;
+                raw.append(column);
+            }
+        }
+    }
+    generateTable(tr,td,text);
+}
+
