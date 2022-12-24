@@ -299,8 +299,8 @@ button.innerText = 'Click';
 document.body.append(inputOne,inputTwo,inputThree,button);
 
 button.onclick = () => {
-    let tr = inputOne.value;
-    let td = inputTwo.value;
+    let num1 = inputOne.value;
+    let num2 = inputTwo.value;
     let text = inputThree.value;
 
     const generateTable = (raws,columns,word) => {
@@ -320,6 +320,6 @@ button.onclick = () => {
             }
         }
     }
-    generateTable(tr,td,text);
+    generateTable(num1,num2,text);
 }
 

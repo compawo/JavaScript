@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.block_div {
+    display: flex;
+    background: #9078b6;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.a_click {
+    display: flex;
+    background: #b2abaf;
+    height: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
