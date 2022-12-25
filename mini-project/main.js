@@ -13,15 +13,15 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
     .then(value => {
         for (const user of value) {
             const div = document.createElement('div');
-            const div2 = document.createElement('div');
+            // const div2 = document.createElement('div');
             div.innerText = `${user.id}. ${user.name}`;
 
-            container.append(div, div2);
+            container.append(div);
             div.classList.add('block_div')
 
             const a = document.createElement('a');
             a.innerText = `Click me`;
-            container.append(a);
+            div.append(a);
             a.classList.add('a_click')
             a.href = `user-details.html?data=${user.id}`;
         }

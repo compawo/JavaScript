@@ -34,11 +34,14 @@ body {
 
 .container_2 {
     width: 100%;
-    flex-direction: row;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 .divPost {
-    width: 19%;
+    width: 15%;
+    height: 100px;
     border:  2px solid black;
     margin: 5px;
     background: #9078b6;
