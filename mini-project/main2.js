@@ -19,12 +19,12 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         for (const user in value) {
 
             const div = document.createElement('div');
-            div.classList.add('main_div')
+            div.classList.add('main_div');
             if (typeof value[user] !== 'object') {
 
                 div.innerHTML = `<b>${user}</b> - ${value[user]}`;
             } else {
-                div.innerHTML = `<b>${user}:</b>`
+                div.innerHTML = `<b>${user}:</b>`;
 
                 for (const key in value[user]) {
                     const userInnerDiv = document.createElement('div');
@@ -52,7 +52,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     });
 
 let button = document.createElement('button');
-button.classList.add('button_post')
+button.classList.add('button_post');
 button.innerText = 'post of current user';
 container.append(button)
 
@@ -76,13 +76,11 @@ button.onclick = function () {
                 container_2.append(div);
 
                 let a = document.createElement('a');
-                a.classList.add('aPost')
+                a.classList.add('aPost');
                 a.innerText = ` Post information`;
                 div.append(a);
                 a.href = `post-details.html?post=${post.id}`;
             }
         });
-
-
 }
 
