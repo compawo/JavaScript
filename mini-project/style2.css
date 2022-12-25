@@ -21,8 +21,9 @@ body {
 .button_post {
     width: 200px;
     border: 2px solid black;
-    margin: 5px;
     background: gainsboro;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .userInnerDiv {

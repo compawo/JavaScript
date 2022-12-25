@@ -24,8 +24,6 @@ body {
 .a_click {
     width: 16%;
     display: flex;
-    background: #b2abaf;
-    height: 25px;
     margin: 10px;
-    border-radius: 10px;
+    border: 2px solid black;
 }
