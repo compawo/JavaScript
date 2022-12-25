@@ -6,6 +6,7 @@
 const url = new URL(location.href);
 const postId = url.searchParams.get('post');
 let container = document.createElement('div');
+container.classList.add('container')
 document.body.append(container);
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
@@ -14,22 +15,25 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
 
         for (const post in posts) {
 
-            const div = document.createElement('div');
-            div.innerHTML = `<b>${post}:</b> ${posts[post]}`;
-            div.style.border = '2px solid black';
-            div.style.margin = '5px';
-            container.append(div);
+            const postDiv = document.createElement('div');
+            postDiv.innerHTML = `<b>${post}:</b> ${posts[post]}`;
+            postDiv.classList.add('post_div')
+            container.append(postDiv);
         }
     });
+
+const container_2 = document.createElement('div')
+container_2.classList.add('container_2')
+container.append(container_2);
 
 fetch(`https://jsonplaceholder.typicode.com/post/${postId}/comments`)
     .then(response => response.json())
     .then(comments => {
         for (const comment of comments) {
-            const div = document.createElement('div');
-            container.append(div);
-            div.innerHTML =`<b>Comment:</b> ${comment.body}`;
-            div.style.border = '2px solid black';
-            div.style.margin = '5px';
+            const commentsDiv = document.createElement('div');
+            container_2.append(commentsDiv);
+            commentsDiv.innerHTML =`<b>Comment:</b> ${comment.body}`;
+            commentsDiv.classList.add('comments_div')
+
         }
     });

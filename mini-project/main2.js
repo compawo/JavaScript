@@ -8,12 +8,18 @@
 const url = new URL(location.href);
 const id = url.searchParams.get('data');
 
+let container = document.createElement('div');
+document.body.append(container);
+container.classList.add('container');
+
+
 fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(value => value.json())
     .then(value => {
         for (const user in value) {
 
             const div = document.createElement('div');
+            div.classList.add('main_div')
             if (typeof value[user] !== 'object') {
 
                 div.innerHTML = `<b>${user}</b> - ${value[user]}`;
@@ -22,6 +28,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
                 for (const key in value[user]) {
                     const userInnerDiv = document.createElement('div');
+                    userInnerDiv.classList.add('userInnerDiv');
                     if (typeof value[user][key] !== 'object') {
                         userInnerDiv.innerHTML = `${key} - ${value[user][key]}`;
 
@@ -30,6 +37,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 
                         for (const element in value[user][key]) {
                             const htmlDivElement = document.createElement('div');
+                            htmlDivElement.classList.add('htmlDivElement');
                             if (typeof value[user][key][element] !== 'object') {
                                 htmlDivElement.innerText = `${element} - ${value[user][key][element]}`;
                             }
@@ -39,13 +47,18 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
                     div.append(userInnerDiv);
                 }
             }
-            document.body.append(div);
+            container.append(div);
         }
     });
 
 let button = document.createElement('button');
+button.classList.add('button_post')
 button.innerText = 'post of current user';
-document.body.append(button)
+container.append(button)
+
+let container_2 = document.createElement('div');
+container_2.classList.add('container_2');
+container.append(container_2);
 
 button.onclick = function () {
 
@@ -53,15 +66,17 @@ button.onclick = function () {
         .then(value => value.json())
         .then(posts => {
 
+
             console.log(posts);
 
             for (const post of posts) {
                 const div = document.createElement('div');
                 div.classList.add('divPost');
                 div.innerText = `${post.title}`;
-                document.body.append(div);
+                container_2.append(div);
 
                 let a = document.createElement('a');
+                a.classList.add('aPost')
                 a.innerText = ` Post information`;
                 div.append(a);
                 a.href = `post-details.html?post=${post.id}`;
@@ -70,3 +85,4 @@ button.onclick = function () {
 
 
 }
+

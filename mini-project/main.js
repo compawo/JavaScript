@@ -5,7 +5,7 @@
 // перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
 
 const container = document.createElement('div');
-container.classList.add('container')
+container.classList.add('container');
 document.body.append(container);
 
 fetch(`https://jsonplaceholder.typicode.com/users`)
@@ -18,9 +18,6 @@ fetch(`https://jsonplaceholder.typicode.com/users`)
 
             container.append(div, div2);
             div.classList.add('block_div')
-            div.style.background = '#9078b6'
-
-
 
             const a = document.createElement('a');
             a.innerText = `Click me`;
