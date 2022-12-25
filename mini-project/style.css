@@ -5,13 +5,14 @@ body {
 }
 
 .container {
-    width: 45%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 
 }
 
 .block_div {
+    width: 45%;
     display: flex;
     background: #9078b6;
     height: 50px;
@@ -20,6 +21,7 @@ body {
 }
 
 .a_click {
+    width: 45%;
     display: flex;
     background: #b2abaf;
     height: 25px;

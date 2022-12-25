@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ce5199a9-6f2d-4a71-8039-e6e9e8595c55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/main2.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/main2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/main3.js" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/main3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/post-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/post-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/style3.css" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/style3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mini-project/user-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/user-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini-project/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mini-project/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <workItem from="1670860318896" duration="392000" />
       <workItem from="1671104421785" duration="5453000" />
       <workItem from="1671798196849" duration="13969000" />
-      <workItem from="1671812315459" duration="13025000" />
+      <workItem from="1671812315459" duration="13924000" />
     </task>
     <task id="LOCAL-00001" summary="task1">
       <created>1667325621483</created>
@@ -231,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671889498560</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="project 3">
+      <created>1671969349518</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671969349518</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +255,7 @@
     <MESSAGE value="finish task/homework 10" />
     <MESSAGE value="project 1" />
     <MESSAGE value="project 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="project 2" />
+    <MESSAGE value="project 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="project 3" />
   </component>
 </project>
