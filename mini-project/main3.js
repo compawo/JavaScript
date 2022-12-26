@@ -22,8 +22,8 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         }
     });
 
-const container_2 = document.createElement('div')
-container_2.classList.add('container_2')
+const container_2 = document.createElement('div');
+container_2.classList.add('container_2');
 container.append(container_2);
 
 fetch(`https://jsonplaceholder.typicode.com/post/${postId}/comments`)
@@ -34,6 +34,5 @@ fetch(`https://jsonplaceholder.typicode.com/post/${postId}/comments`)
             container_2.append(commentsDiv);
             commentsDiv.innerHTML = `<b>Comment:</b> ${comment.body}`;
             commentsDiv.classList.add('comments_div');
-
         }
     });

@@ -54,20 +54,19 @@ fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
 let button = document.createElement('button');
 button.classList.add('button_post');
 button.innerText = 'post of current user';
-container.append(button)
+container.append(button);
 
 let container_2 = document.createElement('div');
 container_2.classList.add('container_2');
 container.append(container_2);
 
-const showInf =` Post information`;
+const showInf = ` Post information`;
 
 button.onclick = function () {
 
     fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
         .then(value => value.json())
         .then(posts => {
-
 
             console.log(posts);
 
