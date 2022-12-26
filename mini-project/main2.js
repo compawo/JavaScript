@@ -60,6 +60,8 @@ let container_2 = document.createElement('div');
 container_2.classList.add('container_2');
 container.append(container_2);
 
+const showInf =` Post information`;
+
 button.onclick = function () {
 
     fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
@@ -77,7 +79,7 @@ button.onclick = function () {
 
                 let a = document.createElement('a');
                 a.classList.add('aPost');
-                a.innerText = ` Post information`;
+                a.innerText = showInf;
                 div.append(a);
                 a.href = `post-details.html?post=${post.id}`;
             }
